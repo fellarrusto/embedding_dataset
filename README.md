@@ -88,7 +88,3 @@ embedding_dataset
 ## Download Dataset as JSONL
 
 To download the dataset in JSONL format, simply click the "Download JSONL" button. This will trigger the download of a `dataset.jsonl` file that contains all the entries in the database.
-
-## License
-
-This project is licensed under the MIT License.

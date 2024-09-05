@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: php_app
+    volumes:
+      - .:/var/www/html  # Monta il codice sorgente locale nella cartella dell'app nel container
+    ports:
+      - "8081:80"  # Espone la porta 80 del container sulla porta 8080 dell'host
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    external: true

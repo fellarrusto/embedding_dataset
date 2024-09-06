@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi_app
+    volumes:
+      - .:/app
+    ports:
+      - "8081:80"
+    networks:
+      - app_network
+    environment:
+      - DATABASE_URL=mysql+pymysql://user:userpassword@mysql_local/dataset_db
+
+networks:
+  app_network:
+    external: true
